@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:>-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class="app">
+            <h1>Meine erste App</h1>
+            <div id="deviceready">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready test</p>
+                <button onclick="openCamera()">Camera</button>
+                <button onclick="getCurrentPosition()">Position</button>
+                <button onclick="scanBarcode()">Scan</button>
+                <button onclick="speechRecognition()">Start Recognition</button>
+                <button onclick="stopRecognition()">Stop Recognition</button>
+                <button onclick="callNumber()">Call Number</button>
+                <button onclick="testShareSheet()">Action Sheet</button>
+                <button onclick="executeFingerPrint()">Fingerprint</button>
+               
+                <button onclick="hasReadPermission()">has read permission</button><br/><br/>
+                <button onclick="requestReadPermission()">req read permission</button><br/><br/>
+                <button onclick="hasWritePermission()">has write permission</button><br/><br/>
+                <button onclick="requestWritePermission()">req write permission</button><br/><br/>
+                <button onclick="hasReadWritePermission()">has readwrite permission</button><br/><br/>
+                <button onclick="requestReadWritePermission()">req readwrite permission</button><br/><br/>
+                <button onclick="openCalendar()">open calendar</button><br/><br/>
+                <button onclick="listCalendars()">list calendars</button><br/><br/>
+                <button onclick="createCalendar()">create calendar</button><br/><br/>
+                <button onclick="deleteCalendar()">delete calendar</button><br/><br/>
+                <button onclick="createCalendarEvent()">create event</button><br/><br/>
+                <button onclick="createCalendarEventWithOptions()">create event with options</button><br/><br/>
+                <button onclick="createCalendarEventInteractively()">create event interactively</button><br/><br/>
+                <button onclick="createCalendarEventInteractivelyWithOptions()">create event interactively with options</button><br/><br/>
+                <button onclick="deleteEvent()">delete event</button><br/><br/>
+                <button onclick="findEventWithFilter()">find event with filter</button><br/><br/>
+                <button onclick="findEventNoFilter()">find event no filter</button><br/><br/>
+                <button onclick="listEventsInRange()">list events in range</button>
+            </div>
+            <img id='myImage' style="width: 100%;">
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/Calendar.js"></script>
+        <script type="text/javascript" src="js/SocialSharing.js"></script>
+        <script type="text/javascript" src="js/TouchID.js"></script>
+    </body>
+</html>
